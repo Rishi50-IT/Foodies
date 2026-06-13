@@ -12,7 +12,7 @@ class MongoDB:
     def __new__(cls):
         if cls._instance is None:
             cls._instance = super().__new__(cls)
-            uri = os.getenv("MONGO_URI", "mongodb://localhost:27017")
+            uri = os.getenv("MONGO_URI","mongodb+srv://Rishi_Munda:Rahul124%40@cluster0.dod06ln.mongodb.net/?appName=Cluster0")
             db_name = os.getenv("MONGO_DB", "foodrush")
             cls._instance.client = MongoClient(uri, serverSelectionTimeoutMS=8000)
             cls._instance.db = cls._instance.client[db_name]
