@@ -22,6 +22,33 @@ inject()
 st.session_state.setdefault("restaurant", None)
 
 
+import streamlit as st
+
+st.markdown("""
+<style>
+
+/* Remove transparency from sidebar */
+[data-testid="stSidebar"] {
+    background-color: #2d2d2d !important;
+    opacity: 1 !important;
+}
+
+/* Remove blur effect */
+[data-testid="stSidebar"] > div:first-child {
+    background-color: #2d2d2d !important;
+    backdrop-filter: none !important;
+}
+
+/* Sidebar text color */
+[data-testid="stSidebar"] * {
+    color: white !important;
+}
+
+</style>
+""", unsafe_allow_html=True)
+
+
+
 def auth_sidebar():
     auth = RestaurantAuth()
     with st.sidebar:
