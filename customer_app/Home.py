@@ -17,6 +17,32 @@ from database.seed import seed_if_empty
 st.set_page_config(page_title="FoodRush", page_icon="🍔", layout="wide")
 inject()
 
+
+import streamlit as st
+
+st.markdown("""
+<style>
+
+/* Remove transparency from sidebar */
+[data-testid="stSidebar"] {
+    background-color: #2d2d2d !important;
+    opacity: 1 !important;
+}
+
+/* Remove blur effect */
+[data-testid="stSidebar"] > div:first-child {
+    background-color: #2d2d2d !important;
+    backdrop-filter: none !important;
+}
+
+/* Sidebar text color */
+[data-testid="stSidebar"] * {
+    color: white !important;
+}
+
+</style>
+""", unsafe_allow_html=True)
+
 # Auto-seed on first run
 if os.getenv("AUTO_SEED", "true").lower() == "true":
     try:
