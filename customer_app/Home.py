@@ -29,11 +29,11 @@ st.markdown("""
     opacity: 1 !important;
 } */
 
-/* Remove blur effect */
+/* Remove blur effect
 [data-testid="stSidebar"] > div:first-child {
     background-color: #2d2d2d !important;
     backdrop-filter: none !important;
-}
+}  */
 
 /* Sidebar text color
 [data-testid="stSidebar"] * {
