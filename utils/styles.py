@@ -56,4 +56,38 @@ h1, h2, h3 {{ font-family: 'Segoe UI', system-ui, sans-serif; }}
 
 
 def inject():
+    st.markdown("""
+<style>
+
+/* Sidebar background */
+[data-testid="stSidebar"] {
+    background: #2d2d2d !important;
+    opacity: 1 !important;
+}
+
+/* Remove blur and transparency */
+[data-testid="stSidebar"] > div:first-child {
+    background-color: #2d2d2d !important;
+    backdrop-filter: none !important;
+}
+
+/* Sidebar text */
+[data-testid="stSidebar"] * {
+    color: white !important;
+}
+
+/* Input boxes */
+.stTextInput input {
+    background-color: white !important;
+    color: black !important;
+}
+
+/* Selectbox */
+.stSelectbox div[data-baseweb="select"] {
+    background-color: white !important;
+    color: black !important;
+}
+
+</style>
+""", unsafe_allow_html=True)
     st.markdown(CSS, unsafe_allow_html=True)
