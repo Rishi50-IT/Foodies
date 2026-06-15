@@ -24,9 +24,9 @@ st.markdown("""
 <style>
 
 /* Remove transparency from sidebar */
-[data-testid="stSidebar"] {
-    background-color: #2d2d2d !important;
-    opacity: 1 !important;
+#[data-testid="stSidebar"] {
+ #background-color: #2d2d2d !important;
+    #opacity: 1 !important;
 }
 
 /* Remove blur effect */
