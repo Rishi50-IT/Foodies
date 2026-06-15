@@ -20,25 +20,47 @@ inject()
 
 import streamlit as st
 
+
+
 st.markdown("""
 <style>
 
-/* Remove transparency from sidebar
+/* Sidebar background (no transparency) */
 [data-testid="stSidebar"] {
- background-color: #2d2d2d !important;
+    background-color: #2d2d2d !important;
     opacity: 1 !important;
-} */
+}
 
-/* Remove blur effect
+/* Remove blur effect */
 [data-testid="stSidebar"] > div:first-child {
     background-color: #2d2d2d !important;
     backdrop-filter: none !important;
-}  */
+}
 
-/* Sidebar text color
-[data-testid="stSidebar"] * {
+/* Sidebar labels and text */
+[data-testid="stSidebar"] label,
+[data-testid="stSidebar"] p,
+[data-testid="stSidebar"] span,
+[data-testid="stSidebar"] div {
     color: white !important;
-} */
+}
+
+/* Login and Signup input boxes */
+[data-testid="stSidebar"] input {
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid #888 !important;
+}
+
+/* Placeholder text */
+[data-testid="stSidebar"] input::placeholder {
+    color: #666 !important;
+}
+
+/* Tabs */
+[data-testid="stSidebar"] button {
+    color: white !important;
+}
 
 </style>
 """, unsafe_allow_html=True)
