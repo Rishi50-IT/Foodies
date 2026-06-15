@@ -24,10 +24,10 @@ st.markdown("""
 <style>
 
 /* Remove transparency from sidebar */
-#[data-testid="stSidebar"] {
- #background-color: #2d2d2d !important;
-    #opacity: 1 !important;
-}*/
+[data-testid="stSidebar"] {
+ background-color: #2d2d2d !important;
+    opacity: 1 !important;
+}
 
 /* Remove blur effect */
 [data-testid="stSidebar"] > div:first-child {
@@ -35,10 +35,10 @@ st.markdown("""
     backdrop-filter: none !important;
 }
 
-/* Sidebar text color */
+/* Sidebar text color
 [data-testid="stSidebar"] * {
     color: white !important;
-}
+} */
 
 </style>
 """, unsafe_allow_html=True)
