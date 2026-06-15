@@ -90,4 +90,4 @@ def inject():
 
 </style>
 """, unsafe_allow_html=True)
-    st.markdown(CSS, unsafe_allow_html=True)
+    #st.markdown(CSS, unsafe_allow_html=True)
