@@ -23,11 +23,11 @@ import streamlit as st
 st.markdown("""
 <style>
 
-/* Remove transparency from sidebar */
+/* Remove transparency from sidebar
 [data-testid="stSidebar"] {
  background-color: #2d2d2d !important;
     opacity: 1 !important;
-}
+} */
 
 /* Remove blur effect */
 [data-testid="stSidebar"] > div:first-child {
